@@ -128,3 +128,7 @@ dmypy.json
 docs/.DS_Store
 
 .DS_Store
+
+docs/tutorials/tabular/agModels-predictClass/
+
+docs/tutorials/tabular/AutogluonModels/ag-20230918_081457/
