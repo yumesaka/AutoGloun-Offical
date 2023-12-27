@@ -3,7 +3,7 @@
 
 ## How can I get the most accurate predictions?
 
-See ["Maximizing predictive performance" in the Tabular Essentials tutorial](tabular-essentials.ipynb).
+See ["Maximizing predictive performance" in the Tabular Essentials tutorial](02_tabular-essentials.ipynb).
 
 
 ## Can I run AutoGluon Tabular on Mac/Windows?
@@ -26,24 +26,24 @@ As an open-source library, AutoGluon can be run on any machine including your la
 
 ## How can I resolve memory issues?
 
-See ["If you encounter memory issues" in the In Depth Tutorial](tabular-indepth.ipynb).
+See ["If you encounter memory issues" in the In Depth Tutorial](03_tabular-indepth.ipynb).
 
 
 ## How can I resolve disk space issues?
 
-See ["If you encounter disk space issues" in the In Depth Tutorial](tabular-indepth.ipynb).
+See ["If you encounter disk space issues" in the In Depth Tutorial](03_tabular-indepth.ipynb).
 
 
 ## How can I reduce the time required for training?
 
 Specify the `time_limit` argument in [predictor.fit](../../api/autogluon.tabular.TabularPredictor.fit.rst) to the number of seconds you are willing to wait (longer time limits generally result in superior predictive performance). You may also try other settings of the `presets` argument in [predictor.fit](../../api/autogluon.tabular.TabularPredictor.fit.rst), and can also subsample your data for a quick trial run via `train_data.sample(n=SUBSAMPLE_SIZE)`. If a particular type of model is taking much longer to train on your data than the other types of models, you can tell AutoGluon not to train any models of this particular type by specifying its short-name in the `excluded_model_types` argument of `fit()`.
 
-Since many of the strategies to reduce memory usage also reduce training times, also check out: ["If you encounter memory issues" in the In Depth Tutorial](tabular-indepth.ipynb).
+Since many of the strategies to reduce memory usage also reduce training times, also check out: ["If you encounter memory issues" in the In Depth Tutorial](03_tabular-indepth.ipynb).
 
 
 ## How can I reduce the time required for prediction?
 
-See ["Accelerating inference" in the In Depth Tutorial](tabular-indepth.ipynb).
+See ["Accelerating inference" in the In Depth Tutorial](03_tabular-indepth.ipynb).
 
 
 ## How does AutoGluon Tabular work internally?
@@ -60,7 +60,7 @@ Specify the argument `verbosity = 4` in `fit()`.
 
 ## What model is AutoGluon using for prediction?
 
-See ["Prediction options" in the In Depth Tutorial](tabular-indepth.ipynb).
+See ["Prediction options" in the In Depth Tutorial](03_tabular-indepth.ipynb).
 
 
 ## Which classes do predicted probabilities correspond to?
@@ -90,7 +90,7 @@ The positive class can also be retrieved via `predictor.class_labels[-1]`. The o
 
 ## How can I use AutoGluon for interpretability?
 
-See ["Interpretability (feature importance)" in the In Depth Tutorial](tabular-indepth.ipynb), which allows you to quantify how much each feature contributes to AutoGluon's predictive accuracy.
+See ["Interpretability (feature importance)" in the In Depth Tutorial](03_tabular-indepth.ipynb), which allows you to quantify how much each feature contributes to AutoGluon's predictive accuracy.
 
 Additionally, you can explain particular AutoGluon predictions using [Shapely values](https://github.com/slundberg/shap/). Notebooks demonstrating this are provided at: [https://github.com/autogluon/autogluon/tree/master/examples/tabular/interpret](https://github.com/autogluon/autogluon/tree/master/examples/tabular/interpret). We recommend starting with the notebook "SHAP with AutoGluon-Tabular" contained in this folder, which demonstrates handling of multiclass classification tasks and data with categorical features.
 
